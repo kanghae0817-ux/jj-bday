@@ -254,7 +254,7 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
             </svg>
             <span className="text-white text-[16px]" style={{ fontFamily: '-apple-system, sans-serif' }}>앨범</span>
           </button>
-          <video className="w-full" style={{ aspectRatio: '9/16' }} controls autoPlay loop playsInline muted>
+          <video className="w-full" style={{ aspectRatio: '9/16' }} controls autoPlay loop playsInline>
             <source src={nuh} type="video/mp4" />
           </video>
         </div>
