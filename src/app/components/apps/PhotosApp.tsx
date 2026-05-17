@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-// import nuh from '../../../songs/nuh.mp4';
-// import profileImg from '../../../images/profile.jpg';
+import nuh from '../../../songs/nuh.mp4';
+import bamtol from '../../../images/bamtol.jpeg'
+import songaji from '../../../images/songaji.jpeg'
+import kot from '../../../images/kot.jpeg'
+import demian from '../../../images/demian.jpeg'
+import hyo from '../../../images/hyo.jpeg'
+import half from '../../../images/0.5x.jpeg'
 
 function IosSignal() {
   return (
@@ -46,13 +51,13 @@ interface PhotosAppProps {
 }
 
 const albums = [
-  { name: '이탈리아',    count: 48,  emoji: '🇮🇹' },
-  { name: '바야돌리드',  count: 20,  emoji: '🇪🇸' },
-  { name: '산타 마리아', count: 12,  emoji: '⛪' },
-  { name: '서울',        count: 35,  emoji: '🇰🇷' },
-  { name: 'Madrid',      count: 27,  emoji: '🌆' },
-  { name: 'Us',          count: 99,  emoji: '💑' },
-];
+  { name: '밤톨머리', count: 20, img: bamtol },
+  { name: '갓 태어난 송아지', count: 12, img: songaji },
+  { name: '은재가 준 꽃', count: 35, img: kot },
+  { name: '데미안 개봉박두 전', count: 27, img: demian },
+  { name: '은재 혓바닥', count: 99, img: hyo },
+  { name: '0.5x', count: 48, img: half },
+]
 
 export default function PhotosApp({ onClose }: PhotosAppProps) {
   const [showHidden, setShowHidden] = useState(false);
@@ -214,7 +219,7 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
                       style={{ width: '72px', height: '72px', background: '#2C2C2E' }}
                     >
                       {/* swap for: <img src={...} className="w-full h-full object-cover" /> */}
-                      {album.emoji}
+                      <img src={album.img} className="w-full h-full object-cover" />
                     </div>
                     {/* Label */}
                     <div className="flex flex-col min-w-0 px-3">
