@@ -52,11 +52,11 @@ interface PhotosAppProps {
 
 const albums = [
   { name: '밤톨머리', count: 20, img: bamtol },
-  { name: '갓 태어난 송아지', count: 12, img: songaji },
+  { name: '갓 태어난 송아지', count: 1, img: songaji },
   { name: '은재가 준 꽃', count: 35, img: kot },
   { name: '데미안 개봉박두 전', count: 27, img: demian },
-  { name: '은재 혓바닥', count: 99, img: hyo },
-  { name: '0.5x', count: 48, img: half },
+  { name: '은재 혓바닥', count: 153, img: hyo },
+  { name: '0.5x', count: 82, img: half },
 ]
 
 export default function PhotosApp({ onClose }: PhotosAppProps) {
@@ -74,7 +74,7 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
       {/* STATUS BAR */}
       <div className="absolute top-[14px] left-0 right-0 px-5 flex justify-between items-center text-white z-10">
         <div className="text-[17px]" style={{ fontFamily: '-apple-system, sans-serif', fontWeight: 600, marginLeft: '20px' }}>
-          12:40
+          09:06
         </div>
         <div className="flex gap-[6px] items-center" style={{ marginRight: '10px' }}>
           <IosSignal /><IosWifi /><IosBattery />
@@ -87,18 +87,18 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
           {/* HEADER */}
           <div className="pt-[54px] px-4 pb-2 flex justify-between items-center">
             <h1 className="text-[34px] font-black text-white" style={{ fontFamily: '-apple-system, sans-serif' }}>
-              Photos
+              사진
             </h1>
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-[6px] px-3 py-[7px] rounded-full" style={{ background: '#2C2C2E' }}>
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round">
                   <circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/>
                 </svg>
-                <span className="text-white text-[13px] font-medium" style={{ fontFamily: '-apple-system, sans-serif' }}>Search</span>
+                <span className="text-white text-[13px] font-medium" style={{ fontFamily: '-apple-system, sans-serif' }}>찾기</span>
               </div>
               <div className="relative">
                 <div className="w-[36px] h-[36px] rounded-full bg-[#FF6B8A] flex items-center justify-center">
-                  <span className="text-white text-[14px] font-bold">HK</span>
+                  <span className="text-white text-[14px] font-bold">DS</span>
                 </div>
                 <div className="absolute -top-1 -right-1 w-[14px] h-[14px] bg-red-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-[8px] font-bold">!</span>
@@ -110,7 +110,7 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
           {/* ── UTILITIES ── */}
           <div className="px-4 mt-7">
             <button className="flex items-center gap-[2px] mb-3">
-              <span className="text-white text-[22px] font-bold" style={{ fontFamily: '-apple-system, sans-serif' }}>Utilities</span>
+              <span className="text-white text-[22px] font-bold" style={{ fontFamily: '-apple-system, sans-serif' }}>기타</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path d="M9 18l6-6-6-6" stroke="white" strokeWidth="2.2" strokeLinecap="round"/>
               </svg>
@@ -123,7 +123,7 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round">
                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                   </svg>
-                  <span className="text-white text-[16px]" style={{ fontFamily: '-apple-system, sans-serif' }}>Favorites</span>
+                  <span className="text-white text-[16px]" style={{ fontFamily: '-apple-system, sans-serif' }}>즐겨찾기</span>
                 </div>
                 <span className="text-white/40 text-[15px]" style={{ fontFamily: '-apple-system, sans-serif' }}>5,632</span>
               </div>
@@ -141,7 +141,7 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
                     <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
                     <line x1="1" y1="1" x2="23" y2="23"/>
                   </svg>
-                  <span className="text-white text-[16px]" style={{ fontFamily: '-apple-system, sans-serif' }}>Hidden</span>
+                  <span className="text-white text-[16px]" style={{ fontFamily: '-apple-system, sans-serif' }}>가려진 항목</span>
                 </div>
                 <LockIcon />
               </button>
@@ -156,7 +156,7 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
                     <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
                     <path d="M10 11v6M14 11v6"/>
                   </svg>
-                  <span className="text-white text-[16px]" style={{ fontFamily: '-apple-system, sans-serif' }}>Recently Deleted</span>
+                  <span className="text-white text-[16px]" style={{ fontFamily: '-apple-system, sans-serif' }}>최근 삭제된 항목</span>
                 </div>
                 <LockIcon />
               </div>
@@ -170,7 +170,7 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
                     <rect x="9" y="9" width="13" height="13" rx="2"/>
                     <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
                   </svg>
-                  <span className="text-white text-[16px]" style={{ fontFamily: '-apple-system, sans-serif' }}>Duplicates</span>
+                  <span className="text-white text-[16px]" style={{ fontFamily: '-apple-system, sans-serif' }}>중복된 항목</span>
                 </div>
                 <span className="text-white/40 text-[15px]" style={{ fontFamily: '-apple-system, sans-serif' }}>3,187</span>
               </div>
@@ -224,7 +224,7 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
                     {/* Label */}
                     <div className="flex flex-col min-w-0 px-3">
                       <span
-                        className="text-white text-[14px] font-medium truncate"
+                        className="text-white text-[10px] font-medium truncate"
                         style={{ fontFamily: '-apple-system, sans-serif' }}
                       >
                         {album.name}
@@ -258,7 +258,6 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
           <video className="w-full" style={{ aspectRatio: '9/16' }} controls autoPlay loop playsInline>
             <source src={nuh} type="video/mp4" />
           </video> */}
-          <div className="text-white/30 text-[17px]" style={{ fontFamily: '-apple-system, sans-serif' }}>🔒 Hidden</div>
         </div>
       )}
 
