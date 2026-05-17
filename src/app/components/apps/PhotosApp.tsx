@@ -252,12 +252,11 @@ export default function PhotosApp({ onClose }: PhotosAppProps) {
             <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
               <path d="M8 2L2 8L8 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <span className="text-white text-[16px]" style={{ fontFamily: '-apple-system, sans-serif' }}>Albums</span>
+            <span className="text-white text-[16px]" style={{ fontFamily: '-apple-system, sans-serif' }}>앨범</span>
           </button>
-          {/* Uncomment when ready:
           <video className="w-full" style={{ aspectRatio: '9/16' }} controls autoPlay loop playsInline>
             <source src={nuh} type="video/mp4" />
-          </video> */}
+          </video>
         </div>
       )}
 
